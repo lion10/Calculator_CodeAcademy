@@ -16,7 +16,7 @@
     <div class="main">
         <h1 style="text-align: center; color: whitesmoke;">Calculator</h1>
         <form name="form">
-            <input type="text" class="textView" name="textView">
+            <input type="text" class="textView" name="textView" id ='inputToViewTheResult'>
         </form>
         <table>
             <tr>
@@ -28,34 +28,32 @@
 
             </tr>
             <tr>
-                <td><input  class="bckgrod_clr_td_blue"  type="button" value="7"  onclick="insertElement(7)"></td>
-                <td><input  class="bckgrod_clr_td_blue"  type="button" value="8"  onclick="insertElement(8)"></td>
-                <td><input  class="bckgrod_clr_td_blue"  type="button" value="9"  onclick="insertElement(9)"></td>
-                <td><input  class="bckgrod_clr_td_green" type="button" value="/"  onclick="insertElement('/')"></td>
-                <td><input  class="bckgrod_clr_td_green" type="button" value="**" onclick="insertElement('**')"></td>
+                <td><input  class="bckgrod_clr_td_blue"  type="button" value="7"  onclick="getNumber(7)"></td>
+                <td><input  class="bckgrod_clr_td_blue"  type="button" value="8"  onclick="getNumber(8)"></td>
+                <td><input  class="bckgrod_clr_td_blue"  type="button" value="9"  onclick="getNumber(9)"></td>
+                <td><input  class="bckgrod_clr_td_green" type="button" value="/"  onclick="getOperand('/')"></td>
+                <td><input  class="bckgrod_clr_td_green" type="button" value="^" onclick="getOperand('^')"></td>
 
             </tr>
             <tr>
-                <td><input class="bckgrod_clr_td_blue"  type="button" value="4"  onclick="insertElement(4)"></td>
-                <td><input class="bckgrod_clr_td_blue"  type="button" value="5"  onclick="insertElement(5)"></td>
-                <td><input class="bckgrod_clr_td_blue"  type="button" value="6"  onclick="insertElement(6)"></td>
-                <td><input class="bckgrod_clr_td_green" type="button" value="*"  onclick="insertElement('*')"></td>
-                <td><input class="bckgrod_clr_td_green" type="button" value="%"  onclick="insertElement('%')"></td>
-
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="4"  onclick="getNumber(4)"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="5"  onclick="getNumber(5)"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="6"  onclick="getNumber(6)"></td>
+                <td><input class="bckgrod_clr_td_green" type="button" value="X"  onclick="getOperand('X')"></td>
+                <td><input class="bckgrod_clr_td_green" type="button" value="%"  onclick="getOperand('%')"></td>
             </tr>
             <tr>
-                <td><input class="bckgrod_clr_td_blue"  type="button" value="1"  onclick="insertElement(1)"></td>
-                <td><input class="bckgrod_clr_td_blue"  type="button" value="2"  onclick="insertElement(2)"></td>
-                <td><input class="bckgrod_clr_td_blue"  type="button" value="3"  onclick="insertElement(3)"></td>
-                <td><input class="bckgrod_clr_td_green" type="button" value="-"  onclick="insertElement('-')"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="1"  onclick="getNumber(1)"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="2"  onclick="getNumber(2)"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="3"  onclick="getNumber(3)"></td>
+                <td><input class="bckgrod_clr_td_green" type="button" value="-"  onclick="getOperand('-')"></td>
                 <td><input class="bckgrod_clr_td_green" type="button" value="<"  onclick="backOneStep()"></td>
-
             </tr>
             <tr>
-                <td><input class="bckgrod_clr_td_blue"  type="button" value="0"  onclick="insertElement(0)"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="0"  onclick="getNumber(0)"></td>
                 <td><input class="bckgrod_clr_td_blue"  type="button" value="."  onclick="insertElement('.')"></td>
-                <td><input class="bckgrod_clr_td_blue"  type="button" value="+/-"  onclick="swapBtwPosAndNeg()"></td>
-                <td><input class="bckgrod_clr_td_green" type="button" value="+"  onclick="insertElement('+')"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="1/x"  onclick="getOperand('1/x')"></td>
+                <td><input class="bckgrod_clr_td_green" type="button" value="+"  onclick="getOperand('+')"></td>
                 <td><input class="bckgrod_clr_td_green" type="button" value="="  onclick="equalOpreation()"></td>
             </tr>
             
