@@ -1,0 +1,52 @@
+  /* Selects all elements */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("https://image.freepik.com/free-photo/keyboard-diary-calculator-blueprint-background_23-2148183022.jpg")  ;
+}
+
+input[ type = "button" ] {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+}
+
+input[ type = "button" ]:hover{
+    background-color: #dcdb27;
+}
+
+.textView{
+    margin: 5px;
+    width: 288px;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.main{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 20px;
+    border-color: red;
+    border: solid #757575 5px;
+    background: #1d1d1d
+}
+
+  /* back ground color for green button */
+.bckgrod_clr_td_green{
+    background-color: #4fcc50;
+}
+.bckgrod_clr_td_red{
+    background-color: #ce1d1d;
+}
+
+.bckgrod_clr_td_blue{
+    background-color: #5454ad;
+}

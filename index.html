@@ -3,41 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        
-        /* Selects all elements */
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        input[ type = "button" ] {
-            width: 50px;
-            height: 50px;
-            font-size: 20px;
-            font-weight: bold;
-            margin: 5px;
-            cursor: pointer;
-        }
-        .textView{
-            margin: 5px;
-            width: 288px;
-            font-size: 25px;
-            padding: 5px;
-            border-radius: 10px;
-        }
-
-        .main{
-            position: absolute;
-            top:50%;
-            left:50%;
-            transform: translateX(-50%) translateY(-50%);
-            border-radius: 20px;
-            border-color: red;
-            border: solid black 5px;
-        }
-        
-
+    <title>Calculator</title>
+    <link rel="stylesheet" href="layout.css">
     </style>
 
 
@@ -47,122 +14,53 @@
     
 
     <div class="main">
-        <h1 style="text-align: center;">Calculator</h1>
+        <h1 style="text-align: center; color: whitesmoke;">Calculator</h1>
         <form name="form">
             <input type="text" class="textView" name="textView">
         </form>
         <table>
             <tr>
-                <td><input type="button" value="&#8362;/$" onclick="convertShekelsToDollars()" ></td>
-                <td><input type="button" value="$/&#8362;" onclick="convertDollarsToShekels()"></td>
-                <td><input type="button" value="&#8362;/&euro;" onclick="convertShekelsToEuros()"></td>
-                <td><input type="button" value="&euro;/&#8362;" onclick="convertEurosToShekels()"></td>
-                <td><input type="button" value="CE" onclick="cleanTheScreen()" ></td>
+                <td ><input class="bckgrod_clr_td_green" type="button" value="&#8362;/$" onclick="convertShekelsToDollars()" ></td>
+                <td ><input class="bckgrod_clr_td_green" type="button" value="$/&#8362;" onclick="convertDollarsToShekels()"></td>
+                <td ><input class="bckgrod_clr_td_green" type="button" value="&#8362;/&euro;" onclick="convertShekelsToEuros()"></td>
+                <td ><input class="bckgrod_clr_td_green" type="button" value="&euro;/&#8362;" onclick="convertEurosToShekels()"></td>
+                <td><input  class="bckgrod_clr_td_red"   type="button" value="CE" onclick="cleanTheScreen()" ></td>
 
             </tr>
             <tr>
-                <td><input type="button" value="7"  onclick="insertElement(7)"></td>
-                <td><input type="button" value="8"  onclick="insertElement(8)"></td>
-                <td><input type="button" value="9"  onclick="insertElement(9)"></td>
-                <td><input type="button" value="/"  onclick="insertElement('/')"></td>
-                <td><input type="button" value="**" onclick="insertElement('**')"></td>
+                <td><input  class="bckgrod_clr_td_blue"  type="button" value="7"  onclick="insertElement(7)"></td>
+                <td><input  class="bckgrod_clr_td_blue"  type="button" value="8"  onclick="insertElement(8)"></td>
+                <td><input  class="bckgrod_clr_td_blue"  type="button" value="9"  onclick="insertElement(9)"></td>
+                <td><input  class="bckgrod_clr_td_green" type="button" value="/"  onclick="insertElement('/')"></td>
+                <td><input  class="bckgrod_clr_td_green" type="button" value="**" onclick="insertElement('**')"></td>
 
             </tr>
             <tr>
-                <td><input type="button" value="4"  onclick="insertElement(4)"></td>
-                <td><input type="button" value="5"  onclick="insertElement(5)"></td>
-                <td><input type="button" value="6"  onclick="insertElement(6)"></td>
-                <td><input type="button" value="*"  onclick="insertElement('*')"></td>
-                <td><input type="button" value="%"  onclick="insertElement('%')"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="4"  onclick="insertElement(4)"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="5"  onclick="insertElement(5)"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="6"  onclick="insertElement(6)"></td>
+                <td><input class="bckgrod_clr_td_green" type="button" value="*"  onclick="insertElement('*')"></td>
+                <td><input class="bckgrod_clr_td_green" type="button" value="%"  onclick="insertElement('%')"></td>
 
             </tr>
             <tr>
-                <td><input type="button" value="1"  onclick="insertElement(1)"></td>
-                <td><input type="button" value="2"  onclick="insertElement(2)"></td>
-                <td><input type="button" value="3"  onclick="insertElement(3)"></td>
-                <td><input type="button" value="-"  onclick="insertElement('-')"></td>
-                <td><input type="button" value="<"  onclick="backOneStep()"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="1"  onclick="insertElement(1)"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="2"  onclick="insertElement(2)"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="3"  onclick="insertElement(3)"></td>
+                <td><input class="bckgrod_clr_td_green" type="button" value="-"  onclick="insertElement('-')"></td>
+                <td><input class="bckgrod_clr_td_green" type="button" value="<"  onclick="backOneStep()"></td>
 
             </tr>
             <tr>
-                <td><input type="button" value="0"  onclick="insertElement(0)"></td>
-                <td><input type="button" value="."  onclick="insertElement('.')"></td>
-                <td><input type="button" value="+/-"  onclick="swapBtwPosAndNeg()"></td>
-                <td><input type="button" value="+"  onclick="insertElement('+')"></td>
-                <td><input type="button" value="="  onclick="equalOpreation()"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="0"  onclick="insertElement(0)"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="."  onclick="insertElement('.')"></td>
+                <td><input class="bckgrod_clr_td_blue"  type="button" value="+/-"  onclick="swapBtwPosAndNeg()"></td>
+                <td><input class="bckgrod_clr_td_green" type="button" value="+"  onclick="insertElement('+')"></td>
+                <td><input class="bckgrod_clr_td_green" type="button" value="="  onclick="equalOpreation()"></td>
             </tr>
             
             
-            <script>
-
-
-                // insert an operation and number to sceren
-                function insertElement(num){
-                    document.form.textView.value = document.form.textView.value + num ;
-                }
-
-                // for = operation
-                function equalOpreation(){
-                  var exp = document.form.textView.value;
-                    if(exp){
-                        document.form.textView.value =eval(exp);
-                    }
-                }
-
-                // clean the screen after we get result
-                function cleanTheScreen()
-                {
-                    document.form.textView.value = "";   
-                }
-
-                // to remove last oprator => get back one step
-                function backOneStep(){
-                    var exp = document.form.textView.value;
-                    document.form.textView.value =exp.substring(0,exp.length -1);
-                }
-
-
-
-                // swap between postive and negative sign
-                function swapBtwPosAndNeg(){
-                    var result = document.form.textView.value; 
-                    document.form.textView.value = '-';
-                    if(result[result.length+1]  === ''){
-                        result[result.length+1] = '-'; 
-                    }else{
-                        result[result.length+1]   = ''; 
-                    }
-                
-                }
-
-
-                // convert Dollars To Shekels
-                function convertDollarsToShekels(){
-                    var result = document.form.textView.value / 3.60 ;
-                    document.form.textView.value = result ; 
-                }
-
-                // convert Shekels To Dollars
-                function convertShekelsToDollars(){
-                    var result = document.form.textView.value * 3.60 ;
-                    document.form.textView.value = result ; 
-                }
-
-                // convert Euros To Shekels
-                function convertEurosToShekels(){
-                    var result = document.form.textView.value * 3.94 ;
-                    document.form.textView.value = result ; 
-                }
-
-                // convert Shekels ToEuros
-                function convertShekelsToEuros(){
-                    var result = document.form.textView.value / 3.94 ;
-                    document.form.textView.value = result ; 
-                }
-
-
-
-            </script>
+            <script src="background_opertion.js"></script>
 
 
         </table>
